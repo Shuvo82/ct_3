@@ -16,18 +16,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'CT-2',
+      debugShowCheckedModeBanner: false, //
+      title: 'CT-2', //
       home: Scaffold(
           backgroundColor: Colors.teal.shade700,
           appBar: AppBar(
             backgroundColor: Color(0xff6200EE),
-            title: const Text('MAD CT-02'),
+            title: const Text('MAD CT-03'),
           ),
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center, //
               children: [
                 Text(
                   "$text",
@@ -48,11 +48,11 @@ class _HomePageState extends State<HomePage> {
                   decoration: const InputDecoration(
                     hintText: 'Enter any text',
                   ),
-                  onChanged: (value) {
-                    setState(() {
-                      value = "23";
-                    });
-                  },
+                  // onChanged: (value) {
+                  //   setState(() {
+                  //     value = "23";
+                  //   });
+                  // },
                 ),
                 SizedBox.fromSize(
                   size: const Size(0, 10),
@@ -65,14 +65,12 @@ class _HomePageState extends State<HomePage> {
                           backgroundColor:
                               MaterialStateProperty.all(Color(0xff6200EE)),
                         ),
+
+                        //b.i
                         onPressed: () {
                           setState(() {
-                            text=textarea.text;
-
+                            text = textarea.text;
                           });
-
-
-
                         },
                         child: const Text('SUBMIT',
                             style: TextStyle(
@@ -82,10 +80,9 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Color(0xff6200EE)),
+                              MaterialStateProperty.all(Color(0xff6200EE)),
                         ),
-
-
+                        //b.ii
                         onPressed: () {
                           setState(() {
                             textarea.clear();
